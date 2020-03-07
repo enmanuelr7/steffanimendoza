@@ -1,0 +1,26 @@
+header {
+  nav {
+    a.navbar-brand {
+      font-size: 28px;
+    }
+    div.navbar-nav {
+      a {
+        color: #000;
+        transition: .3s;
+      }
+    }
+    div.navbar-nav:hover {
+      a {
+        color: #999;
+        transition: .3s;
+      }
+      a:hover {
+        color:#000;
+        transition: .3s;
+      }
+    }
+    .icon {
+      font-size: 18px;
+    }
+  }
+}
