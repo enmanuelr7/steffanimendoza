@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Router, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -16,9 +17,20 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  show = false;
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.show = false;
+        setTimeout(() => {
+          this.show = true;
+        }, 400);
+      }
+    });
+
   }
 
 }

@@ -1,11 +1,11 @@
-<footer @fade>
+<footer *ngIf="show">
     <div class="row no-gutters justify-content-center h-100">
         <div class="col-auto d-flex align-items-center">
             <span class="footer-items-container">
                 <a class="footer-item px-3" routerLink="/about">
                     Quién Soy
                 </a>
-                <a class="footer-item px-3" href="#">
+                <a class="footer-item px-3" routerLink="/blog">
                     Blog
                 </a>
                 <a class="footer-item px-3" href="#">

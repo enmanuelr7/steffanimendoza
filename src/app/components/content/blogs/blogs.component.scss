@@ -1,0 +1,78 @@
+
+div.img-container {
+  height: 100vh;
+  margin-top: -67.8px;
+  img.blog-page-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+span.heading {
+  font-size: 30px;
+}
+
+div.category {
+  height: 150px;
+  position: relative;
+  margin-bottom: 25px;
+  transition: 0.3s;
+  a {
+    color: #777;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    div {
+      position: relative;
+      font-size: 50px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+    div:hover {
+      color: #000;
+    }
+  }
+}
+
+// div.category:hover {
+//   box-shadow: 0px 0px 6px 3px lightgrey;
+// }
+
+
+div.category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: opacity(40%);
+  transition: 0.3s;
+}
+
+div.category:hover::before {
+  filter: opacity(55%);
+}
+
+
+div.category.belleza::before {
+  background-image: url(../../../../assets/belleza.jpg);
+}
+
+div.category.fitness::before {
+  background-image: url(../../../../assets/fitness.jpg);
+}
+
+div.category.comida::before {
+  background-image: url(../../../../assets/carbonara.jpg);
+}
+
+div.category.mente::before {
+  background-image: url(../../../../assets/mente.jpg);
+}

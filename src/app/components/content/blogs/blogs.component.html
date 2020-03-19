@@ -1,0 +1,64 @@
+<div @fade class="row no-gutters blogs">
+    <div class="col">
+
+        <div class="img-container">
+            <img src="../../../../assets/convi.jpg" alt="" class="blog-page-img">
+        </div>
+        <div class="recent mt-5">
+            <div class="text-center">
+                <span class="heading">
+                    LO MÁS RECIENTE
+                </span>
+            </div>
+            <div class="d-flex justify-content-around w-100 mt-5">
+                <span *ngFor="let blog of blogs" class="d-flex">
+                    <app-blog [blog]="blog"></app-blog>
+                </span>
+            </div>
+        </div>
+        <div class="categories">
+            <div class="text-center my-5">
+                <span class="heading">
+                    FOCOS
+                </span>
+            </div>
+            <div class="category belleza">
+                <a href="#" class="category-anchor">
+                    <div>
+                        <span>
+                            belleza
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="category fitness">
+                <a href="#" class="category-anchor">
+                    <div>
+                        <span>
+                            fitness
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="category comida">
+                <a href="#" class="category-anchor">
+                    <div>
+                        <span>
+                            comida
+                        </span>
+                    </div>
+                </a>
+            </div>
+            <div class="category mente">
+                <a href="#" class="category-anchor">
+                    <div>
+                        <span>
+                            mente
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>

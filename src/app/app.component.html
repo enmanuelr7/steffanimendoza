@@ -1,11 +1,12 @@
-<div class="container-fluid px-0">
+<div class="container-fluid px-0 position-relative">
   <div class="row no-gutters">
     <div class="col">
       <app-header></app-header>
-      <main class="px-3">
-        <router-outlet></router-outlet>
+      <main class="">
+        <router-outlet>
+        </router-outlet>
       </main>
-      <!-- <app-footer></app-footer> -->
+      <app-footer #footer></app-footer>
     </div>
   </div>
 </div>
