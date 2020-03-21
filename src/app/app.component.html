@@ -2,11 +2,16 @@
   <div class="row no-gutters">
     <div class="col">
       <app-header></app-header>
-      <main class="">
+      <main>
         <router-outlet>
         </router-outlet>
       </main>
-      <app-footer #footer></app-footer>
+      <app-footer></app-footer>
+      <div *ngIf="showMenu" class="menu-mobile mobile-only">
+        <button class="menu-close" (click)="closeMenu()">
+          <mat-icon>clear</mat-icon>
+        </button>
+      </div>
     </div>
   </div>
 </div>

@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MaterialModule } from './material/material.module';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/content/home/home.component';
 import { AboutComponent } from './components/content/about/about.component';
 import { BlogsComponent } from './components/content/blogs/blogs.component';
-import { RecentBlogComponent } from './components/content/blogs/blog/recent-blog.component';
+import { RecentBlogComponent } from './components/content/blogs/recent-blog/recent-blog.component';
+import { BlogComponent } from './components/content/blog/blog.component';
 
 
 
@@ -24,14 +26,16 @@ import { RecentBlogComponent } from './components/content/blogs/blog/recent-blog
     HomeComponent,
     AboutComponent,
     BlogsComponent,
-    RecentBlogComponent
+    RecentBlogComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

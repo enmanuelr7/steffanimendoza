@@ -9,3 +9,15 @@ body {
   font-family: 'Raleway', sans-serif;
   
 }
+
+@media screen and (max-width: 991px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mobile-only {
+    display: none !important;
+  }
+}

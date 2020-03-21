@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'steffanimendoza';
+  showMenu = true;
+  closeMenu(): void {
+    this.showMenu = false;
+  }
 }
