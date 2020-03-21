@@ -12,7 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/content/home/home.component';
 import { AboutComponent } from './components/content/about/about.component';
 import { BlogsComponent } from './components/content/blogs/blogs.component';
-import { BlogComponent } from './components/content/blogs/blog/blog.component';
+import { RecentBlogComponent } from './components/content/blogs/blog/recent-blog.component';
 
 
 
@@ -24,7 +24,7 @@ import { BlogComponent } from './components/content/blogs/blog/blog.component';
     HomeComponent,
     AboutComponent,
     BlogsComponent,
-    BlogComponent
+    RecentBlogComponent
   ],
   imports: [
     BrowserModule,

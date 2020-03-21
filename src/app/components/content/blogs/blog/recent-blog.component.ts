@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Blog } from 'src/app/models/Blog';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  selector: 'app-recent-blog',
+  templateUrl: './recent-blog.component.html',
+  styleUrls: ['./recent-blog.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class RecentBlogComponent implements OnInit {
 
   @Input() blog: Blog;
 
