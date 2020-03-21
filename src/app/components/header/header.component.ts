@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -16,9 +16,16 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() menuOpen = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  openMenu(): void {
+    this.menuOpen.emit();
+  }
+
 }
+

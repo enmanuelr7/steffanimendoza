@@ -15,6 +15,7 @@ import { AboutComponent } from './components/content/about/about.component';
 import { BlogsComponent } from './components/content/blogs/blogs.component';
 import { RecentBlogComponent } from './components/content/blogs/recent-blog/recent-blog.component';
 import { BlogComponent } from './components/content/blog/blog.component';
+import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.component';
 
 
 
@@ -27,7 +28,8 @@ import { BlogComponent } from './components/content/blog/blog.component';
     AboutComponent,
     BlogsComponent,
     RecentBlogComponent,
-    BlogComponent
+    BlogComponent,
+    MenuMobileComponent
   ],
   imports: [
     BrowserModule,

@@ -6,17 +6,29 @@ body {
 }
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
-  
+  font-family: "Raleway", sans-serif;
 }
 
+
+// MOBILE
 @media screen and (max-width: 991px) {
   .desktop-only {
     display: none !important;
   }
+  footer {
+    font-size: 14px;
+  }
 }
 
+
+// DESKTOP
 @media screen and (min-width: 992px) {
+  .home-txt-container {
+    padding: 0px 16px 0px 0px;
+  }
+  div.home-img-container {
+    padding: 0px 32px;
+  }
   .mobile-only {
     display: none !important;
   }

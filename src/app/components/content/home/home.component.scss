@@ -2,12 +2,7 @@ img.home-img {
   width: 100%;
 }
 
-.home-img-container {
-  padding: 0px 32px;
-}
-
-.home-txt-container {
-  padding: 0px 16px 0px 0px;
+div.home-txt-container {
   font-size: 25px;
 }
 
@@ -22,13 +17,4 @@ a.download-btn {
 a.download-btn:hover {
   background-color: #000;
   color: #fff;
-}
-
-footer {
-  height: 100px;
-  background-color: #000;
-  a.footer-item {
-    color: #fff;
-    text-decoration: none;
-  }
 }

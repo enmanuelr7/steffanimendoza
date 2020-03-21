@@ -31,7 +31,6 @@ export class BlogComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.blogService.getBlog(id).subscribe(blog => {
       this.blog = blog;
-      console.log(this.blog);
     });
 
   }

@@ -1,17 +1,15 @@
-<div class="container-fluid px-0 position-relative">
+<div class="container-fluid px-0 app">
   <div class="row no-gutters">
     <div class="col">
-      <app-header></app-header>
-      <main>
-        <router-outlet>
-        </router-outlet>
-      </main>
-      <app-footer></app-footer>
-      <div *ngIf="showMenu" class="menu-mobile mobile-only">
-        <button class="menu-close" (click)="closeMenu()">
-          <mat-icon>clear</mat-icon>
-        </button>
+      <app-header (menuOpen)="openMenu()"></app-header>
+      <div class="row no-gutters main">
+        <div class="col">
+          <router-outlet>
+          </router-outlet>
+        </div>
       </div>
+      <app-footer></app-footer>
+      <app-menu-mobile @fade *ngIf="showMenu" (menuClose)="closeMenu()" class="mobile-only"></app-menu-mobile>
     </div>
   </div>
 </div>

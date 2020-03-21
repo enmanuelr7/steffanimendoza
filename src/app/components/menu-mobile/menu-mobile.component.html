@@ -1,0 +1,27 @@
+<div class="menu-mobile mobile-only">
+  <div class="row no-gutters menu-header align-items-center">
+    <div class="col">
+      <a routerLink="/home" (click)="closeMenu()" class="logo">VASA</a>
+    </div>
+    <div class="col-auto">
+      <button class="menu-close" (click)="closeMenu()">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="row no-gutters menu-content align-items-center">
+    <div class="col">
+      <a routerLink="/about" (click)="closeMenu()" class="d-block text-center my-4 mobile-menu-item">Quién Soy</a>
+      <a routerLink="/blog" (click)="closeMenu()" class="d-block text-center my-4 mobile-menu-item">Blog</a>
+      <div class="d-flex justify-content-center my-4">
+        <span class="mr-1">
+          <a href="https://www.instagram.com/steffanimendozza" (click)="closeMenu()" target="_blank"
+            class="mobile-menu-item px-3"><i class="fab fa-instagram"></i></a>
+        </span>
+        <span class="ml-1">
+          <a href="#" (click)="closeMenu()" class="mobile-menu-item px-3"><i class="far fa-envelope"></i></a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
