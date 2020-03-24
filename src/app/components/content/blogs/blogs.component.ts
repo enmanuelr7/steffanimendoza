@@ -19,14 +19,29 @@ import { Blog } from 'src/app/models/Blog';
 export class BlogsComponent implements OnInit {
 
   blogs: Blog[];
+  contentLoaded = false;
 
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
     this.blogService.getBlogs().subscribe(
-      res => this.blogs = res.slice(res.length - 3).reverse(),
-      err => console.error('error lanzado', err)
+      res => {
+        if (res.length >= 3) {
+          this.blogs = res.slice(res.length - 3).reverse();
+        } else if (res.length === 2) {
+          this.blogs = res.slice(res.length - 2).reverse();
+        } else {
+          this.blogs = res;
+        }
+      },
+      err => {
+        return console.error('error lanzado', err);
+      }
     );
+    this.contentLoaded = true;
   }
+
+
+
 
 }

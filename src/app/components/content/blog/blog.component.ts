@@ -21,6 +21,7 @@ import { Blog } from 'src/app/models/Blog';
 export class BlogComponent implements OnInit {
 
   blog: Blog;
+  contentLoaded = false;
 
   constructor(
     private blogService: BlogService,
@@ -32,7 +33,7 @@ export class BlogComponent implements OnInit {
     this.blogService.getBlog(id).subscribe(blog => {
       this.blog = blog;
     });
-
+    this.contentLoaded = true;
   }
 
 }
