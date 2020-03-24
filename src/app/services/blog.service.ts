@@ -35,11 +35,11 @@ export class BlogService {
   constructor(private http: HttpClient) { }
 
   getBlogs(): Observable<Blog[]> {
-    return this.http.get<Blog[]>('http://localhost:5000/blogs/');
+    return this.http.get<Blog[]>('https://steffani-mendoza-api.herokuapp.com/blogs');
   }
 
   getBlog(id: string): Observable<Blog> {
-    return this.http.get<Blog>(`http://localhost:5000/blogs/${id}`);
+    return this.http.get<Blog>(`https://steffani-mendoza-api.herokuapp.com/blogs/${id}`);
   }
 
 

@@ -1,7 +1,7 @@
 <div class="blog mt-4 mt-lg-0">
     <a [routerLink]="['/blog', blog.id]">
         <div class="blog-img-container">
-            <img src="http://localhost:5000/images/{{blog.imageUrl}}" alt="" class="blog-img">
+            <img src="{{blog.imageUrl}}" alt="" class="blog-img">
         </div>
         <div class="blog-intro">
             <div class="blog-title">{{blog.title}}</div>
