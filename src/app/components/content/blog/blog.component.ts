@@ -29,8 +29,8 @@ export class BlogComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.blogService.getBlog(id).subscribe(blog => {
+    const title = this.route.snapshot.paramMap.get('title');
+    this.blogService.getBlog(title).subscribe(blog => {
       this.blog = blog;
       this.contentLoaded = true;
     });

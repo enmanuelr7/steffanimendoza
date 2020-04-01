@@ -1,16 +1,16 @@
-<div @fade *ngIf="contentLoaded" class="row no-gutters">
+<div @fade *ngIf="contentLoaded" class="row no-gutters mb-5">
     <div class="col">
         <div class="row no-gutters justify-content-center mb-3">
             <div class="col-11 col-lg-6">
-                <h1 class="text-center blog-heading">{{blog.title}}</h1>
+                <h1 class="text-center blog-heading">{{blog.title | replaceDash}}</h1>
             </div>
         </div>
-        <div class="row no-gutters justify-content-center mb-3">
+        <div class="row no-gutters justify-content-center mb-4">
             <div class="col-11 col-lg-5">
                 <img src="{{blog.imageUrl}}" alt="" class="w-100">
             </div>
         </div>
-        <div class="row no-gutters justify-content-center mb-3 bolg-content">
+        <div class="row no-gutters justify-content-center blog-content">
             <div class="col-11 col-lg-6">
                 {{blog.content}}
             </div>

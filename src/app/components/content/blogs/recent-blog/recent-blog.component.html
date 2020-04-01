@@ -1,10 +1,10 @@
 <div class="blog mt-4 mt-lg-0">
-    <a [routerLink]="['/blog', blog.id]">
+    <a [routerLink]="['/blog', blog.title]">
         <div class="blog-img-container">
             <img src="{{blog.imageUrl}}" alt="" class="blog-img">
         </div>
         <div class="blog-intro">
-            <div class="blog-title">{{blog.title}}</div>
+            <div class="blog-title">{{blog.title | replaceDash}}</div>
             <div class="blog-content">{{ blog.content.length>350 ? (blog.content | slice:0:350) + '...' : (blog.content) }}</div>
         </div>
         <div class="blog-link">

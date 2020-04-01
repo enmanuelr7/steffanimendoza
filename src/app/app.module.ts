@@ -16,6 +16,7 @@ import { BlogsComponent } from './components/content/blogs/blogs.component';
 import { RecentBlogComponent } from './components/content/blogs/recent-blog/recent-blog.component';
 import { BlogComponent } from './components/content/blog/blog.component';
 import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.component';
+import { ReplaceDashPipe } from './pipes/replace-dash.pipe';
 
 
 
@@ -29,7 +30,8 @@ import { MenuMobileComponent } from './components/menu-mobile/menu-mobile.compon
     BlogsComponent,
     RecentBlogComponent,
     BlogComponent,
-    MenuMobileComponent
+    MenuMobileComponent,
+    ReplaceDashPipe
   ],
   imports: [
     BrowserModule,

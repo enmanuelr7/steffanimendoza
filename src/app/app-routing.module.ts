@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'blog', component: BlogsComponent },
-  { path: 'blog/:id', component: BlogComponent },
+  { path: 'blog/:title', component: BlogComponent },
   { path: '**', pathMatch: 'prefix', redirectTo: 'home' }
 ];
 
