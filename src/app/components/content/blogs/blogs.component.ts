@@ -33,12 +33,12 @@ export class BlogsComponent implements OnInit {
         } else {
           this.blogs = res;
         }
+        this.contentLoaded = true;
       },
       err => {
         return console.error('error lanzado', err);
       }
     );
-    this.contentLoaded = true;
   }
 
 

@@ -1,0 +1,17 @@
+<div @fade class="row no-gutters">
+    <div class="col">
+        <div class="mb-5 d-flex quote align-items-center justify-content-center">
+            <span class="col-10 col-lg-5">
+                <p>
+                    {{ quote.quote }}
+                </p>
+                <P class="author">
+                    {{ quote.author }}
+                </P>
+            </span>
+        </div>
+        <div class="blogs mb-5">
+            <app-recent-blog *ngFor="let blog of blogs" [blog]="blog"></app-recent-blog>
+        </div>
+    </div>
+</div>
