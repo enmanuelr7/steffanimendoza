@@ -23,10 +23,16 @@ body {
 
 // DESKTOP
 @media screen and (min-width: 992px) {
-  .home-txt-container {
-    padding: 0px 16px 0px 0px;
+  div.home-txt-container {
+    padding: 0px 32px 0px 0px !important; 
   }
   div.home-img-container {
+    padding: 0px 32px;
+  }
+  div.blogs-txt-container {
+    padding: 0px 32px 0px 0px !important; 
+  }
+  div.blogs-img-container {
     padding: 0px 32px;
   }
   .mobile-only {

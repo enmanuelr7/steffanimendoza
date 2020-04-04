@@ -1,20 +1,39 @@
-<div *ngIf="contentLoaded" @fade class="row no-gutters">
+<div @fade class="row no-gutters">
     <div class="col">
 
-        <div class="img-container">
-            <img src="../../../../assets/convi.jpg" alt="blogs" class="blog-page-img landscape">
+        <!-- <div class="img-container">
+            <img src="../../../../assets/blogs-landscape.jpg" alt="blogs" class="blog-page-img landscape">
             <img src="../../../../assets/blogs-portrait.jpg" alt="blogs" class="blog-page-img portrait">
             <span class="arrow-down"><i class="fas fa-arrow-down"></i></span>
+        </div> -->
+
+
+        <div class="row no-gutters mt-3 mb-5 justify-content-center">
+            <div class="col-10 col-lg-7">
+                <div class="blogs-img-container">
+                    <img src="../../../../assets/blogs.jpg" alt="blogs" class="blogs-img">
+                </div>
+            </div>
+            <div class="col-10 col-lg-5 mt-3 mt-lg-0 blogs-txt-container d-flex align-items-center">
+                <div class="blog-txt">
+                    <div>
+                        "Sólo necesitamos dar pasos firmes en el camino correcto"
+                    </div>
+                    <span class="float-right mr-lg-5">
+                        Steffani
+                    </span>
+                </div>
+            </div>
         </div>
 
 
-        <div class="recent mt-5">
+        <div *ngIf="contentLoaded" class="recent mt-2 mt-lg-5">
             <div class="text-center">
                 <span class="heading">
                     LO MÁS RECIENTE
                 </span>
             </div>
-            <div class="row no-gutters justify-content-around mt-5">
+            <div class="row no-gutters justify-content-around mt-2 mt-lg-5">
                 <div *ngFor="let blog of blogs" class="col-auto">
                     <span class="mt-2 mt-lg-5">
                         <app-recent-blog [blog]="blog"></app-recent-blog>
@@ -28,7 +47,7 @@
 
 
         <div class="categories">
-            <div class="text-center my-5">
+            <div class="text-center mt-5 mb-4 mb-lg-5">
                 <span class="heading">
                     FOCOS
                 </span>
