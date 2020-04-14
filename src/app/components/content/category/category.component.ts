@@ -29,7 +29,7 @@ export class CategoryComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const categoryName = this.route.snapshot.url[1].path.toLowerCase();
+    const categoryName = this.route.snapshot.url[0].path.toLowerCase();
     this.blogService.getBlogsByCategoryName(categoryName).subscribe(res => {
       this.blogs = res;
     }, err => {

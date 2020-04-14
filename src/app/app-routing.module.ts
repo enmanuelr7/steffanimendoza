@@ -9,18 +9,23 @@ import { CategoryComponent } from './components/content/category/category.compon
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
-  { path: 'blog', component: BlogsComponent },
-  { path: 'blog/beauty', component: CategoryComponent },
-  { path: 'blog/fitness', component: CategoryComponent },
-  { path: 'blog/food', component: CategoryComponent },
-  { path: 'blog/mindfulness', component: CategoryComponent },
-  { path: 'blog/:title', component: BlogComponent },
-  { path: '**', pathMatch: 'prefix', redirectTo: 'home' }
+  {
+    path: 'blog', children: [
+      { path: '', component: BlogsComponent },
+      { path: 'fitness', component: CategoryComponent },
+      { path: 'food', component: CategoryComponent },
+      { path: 'mindfulness', component: CategoryComponent },
+      { path: 'beauty', component: CategoryComponent },
+      { path: ':title', component: BlogComponent },
+    ]
+  },
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
