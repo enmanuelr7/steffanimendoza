@@ -36,13 +36,9 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
     const title = this.route.snapshot.paramMap.get('title');
     const titleNoDash = this.replaceDash.transform(title);
-    this.titleService.setTitle(`VASA - BLOG - ${titleNoDash}`);
+    this.titleService.setTitle(`${titleNoDash} | VASA`);
     this.blogService.getBlog(title).subscribe(blog => {
       this.blog = blog;
-      this.metaTagService.updateTag({
-        tag: 'description',
-        content: `${blog.content.slice(0, 100) + '...'}`
-      }, `name='description'`);
       this.contentLoaded = true;
     });
   }

@@ -23,11 +23,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.titleService.setTitle('VASA - HOME');
-    this.metaTagService.updateTag({
-      tag: 'description',
-      content: `blogs sobre belleza, fitness, mindfulness, y alimentación`
-    }, `name='description'`);
+    this.titleService.setTitle('VASA');
   }
 
 }

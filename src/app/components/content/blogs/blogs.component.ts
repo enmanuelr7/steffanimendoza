@@ -29,11 +29,7 @@ export class BlogsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.titleService.setTitle(`VASA - BLOG`);
-    this.metaTagService.updateTag({
-      tag: 'description',
-      content: `blogs sobre belleza, fitness, mindfulness, y alimentación`
-    }, `name='description'`);
+    this.titleService.setTitle(`BLOG | VASA`);
     this.blogService.getBlogs().subscribe(
       res => {
         if (res.length >= 3) {

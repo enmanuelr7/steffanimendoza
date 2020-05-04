@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.metaTagService.addTags([
-      { name: 'keywords', content: 'Bienestar, Comida saludable, Ejercicio, Belleza, Autoconocimiento' },
+      { name: 'keywords', content: 'bienestar, comida saludable, ejercicio, belleza, autoconocimiento' },
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: 'Steffani Mendoza' },
       { name: 'date', content: '2020-03-15', scheme: 'YYYY-MM-DD' },
