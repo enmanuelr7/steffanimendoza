@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {trigger, style, animate, transition} from '@angular/animations';
+import { trigger, style, animate, transition } from '@angular/animations';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -16,9 +17,17 @@ import {trigger, style, animate, transition} from '@angular/animations';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title,
+    private metaTagService: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle('VASA - HOME');
+    this.metaTagService.updateTag({
+      tag: 'description',
+      content: `blogs sobre belleza, fitness, mindfulness, y alimentación`
+    }, `name='description'`);
   }
 
 }

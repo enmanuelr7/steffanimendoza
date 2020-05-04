@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -16,9 +17,17 @@ import { trigger, transition, style, animate } from '@angular/animations';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title,
+    private metaTagService: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle(`VASA - ABOUT`);
+    this.metaTagService.updateTag({
+      tag: 'description',
+      content: `blogs sobre belleza, fitness, mindfulness, y alimentación`
+    }, `name='description'`);
   }
 
 }

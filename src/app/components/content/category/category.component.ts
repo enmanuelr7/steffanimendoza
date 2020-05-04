@@ -4,6 +4,7 @@ import { Blog } from 'src/app/models/Blog';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from 'src/app/services/blog.service';
 import { quotes } from './quotes';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-category',
@@ -26,10 +27,17 @@ export class CategoryComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private blogService: BlogService,
+    private titleService: Title,
+    private metaTagService: Meta
   ) { }
 
   ngOnInit() {
     const categoryName = this.route.snapshot.url[0].path.toLowerCase();
+    this.titleService.setTitle(`VASA - ${categoryName.toUpperCase()}`);
+    this.metaTagService.updateTag({
+      tag: 'description',
+      content: `blogs acerca de ${categoryName}`
+    }, `name='description'`);
     this.blogService.getBlogsByCategoryName(categoryName).subscribe(res => {
       this.blogs = res;
     }, err => {

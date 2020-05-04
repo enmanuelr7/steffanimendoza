@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Meta } from '@angular/platform-browser';
 
 
 @Component({
@@ -12,13 +13,29 @@ import { trigger, transition, style, animate } from '@angular/animations';
         style({ opacity: 0 }),
         animate(200)
       ]), transition('* => void',
-      animate(200, style({opacity: 0})))
+        animate(200, style({ opacity: 0 })))
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
   showMenu = false;
   body = document.querySelector('body');
+
+  constructor(
+    private metaTagService: Meta
+  ) { }
+
+  ngOnInit(): void {
+    this.metaTagService.addTags([
+      { name: 'keywords', content: 'Bienestar, Comida saludable, Ejercicio, Belleza, Autoconocimiento' },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'author', content: 'Steffani Mendoza' },
+      { name: 'date', content: '2020-03-15', scheme: 'YYYY-MM-DD' },
+      { charset: 'UTF-8' }
+    ]);
+  }
+
 
   openMenu(): void {
     this.body.style.overflow = 'hidden';

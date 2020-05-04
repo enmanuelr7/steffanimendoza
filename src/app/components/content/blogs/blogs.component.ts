@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { BlogService } from 'src/app/services/blog.service';
 import { Blog } from 'src/app/models/Blog';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blogs',
@@ -21,9 +22,18 @@ export class BlogsComponent implements OnInit {
   blogs: Blog[];
   contentLoaded = false;
 
-  constructor(private blogService: BlogService) { }
+  constructor(
+    private blogService: BlogService,
+    private titleService: Title,
+    private metaTagService: Meta
+  ) { }
 
   ngOnInit() {
+    this.titleService.setTitle(`VASA - BLOG`);
+    this.metaTagService.updateTag({
+      tag: 'description',
+      content: `blogs sobre belleza, fitness, mindfulness, y alimentación`
+    }, `name='description'`);
     this.blogService.getBlogs().subscribe(
       res => {
         if (res.length >= 3) {

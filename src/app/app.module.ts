@@ -43,7 +43,7 @@ import { CategoryComponent } from './components/content/category/category.compon
     HttpClientModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [ReplaceDashPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
