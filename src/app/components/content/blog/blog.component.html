@@ -7,12 +7,12 @@
         </div>
         <div class="row no-gutters justify-content-center mb-4">
             <div class="col-11 col-lg-5">
-                <img src="{{blog.imageUrl}}" alt="" class="w-100">
+                <img src="{{ blog.imageUrl }}" alt="{{ blog.title | replaceDash }}" class="w-100">
             </div>
         </div>
         <div class="row no-gutters justify-content-center blog-content">
             <div class="col-11 col-lg-6">
-                {{blog.content}}
+                {{ blog.content }}
             </div>
         </div>
     </div>
